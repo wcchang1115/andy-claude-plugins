@@ -1,0 +1,16 @@
+{
+  "name": "andy-claude-plugins",
+  "owner": { "name": "Wei-Chun, Chang", "email": "16777014+wcchang1115@users.noreply.github.com" },
+  "metadata": {
+    "description": "Andy's personal Claude Code plugins"
+  },
+  "plugins": [
+    {
+      "name": "dev-writing-guides",
+      "source": "./plugins/dev-writing-guides",
+      "description": "Writing guides and review checklists for commit messages, PR descriptions, and code comments",
+      "version": "0.1.0",
+      "author": { "name": "Wei-Chun, Chang" }
+    }
+  ]
+}
