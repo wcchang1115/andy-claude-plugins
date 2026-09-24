@@ -9,7 +9,7 @@
       "name": "dev-writing-guides",
       "source": "./plugins/dev-writing-guides",
       "description": "Writing guides and review checklists for commit messages, PR descriptions, and code comments",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": { "name": "Wei-Chun, Chang" }
     }
   ]

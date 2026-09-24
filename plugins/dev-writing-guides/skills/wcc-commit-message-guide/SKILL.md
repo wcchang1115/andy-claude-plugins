@@ -25,7 +25,9 @@ Keep three things at most. Everything else is a finding.
 
 1. **The decision, and what forced it.** The wrong behavior or the gap the change answers.
 2. **What the change does, at a high level.** One sentence, in terms of purpose, not mechanism.
-3. **At most one fact the reader cannot get from the diff and would not expect from the subject**: a behavior change wider than the subject promises, deleted tests, a deferred part.
+3. **At most one fact the reader cannot get from the diff and would not expect from the subject**: a behavior change wider than the subject promises, or deleted tests.
+
+Items 1 and 2 are both required. A body with only the old problem, or only the new behavior, is a finding.
 
 Cut every one of these, always:
 
@@ -35,6 +37,8 @@ Cut every one of these, always:
 | File lists, handler names, field lists, helper mechanics, the reason behind a query | The diff shows it |
 | Fixture and mock mechanics (mock setup, export lists) | Test-harness detail, not a reason the commit exists |
 | History archaeology: which earlier commit did what, what it assumed | `git log` and the tracker issue hold it |
+| Session history: an earlier wrong draft, a mistake fixed during the session, what caused a similar problem before | The reader was not in the session |
+| Out of scope: what the change leaves out or does not change | The PR description holds it |
 | Anything the type and scope already imply ("Comments only. No behavior change." on a `docs()` commit) | Restates the subject |
 | A rationale that already exists as a code comment in this diff | Stated twice |
 | Restating the subject line in the first body sentence | Adds no fact |
@@ -46,7 +50,6 @@ Then apply these:
 - **Shorten by deleting, not compressing.** A shorter but unreadable sentence is a new finding, not a fix. If the tighter rewrite lost meaning, keep the original.
 - **Length gate.** Body is one or two paragraphs, 3 to 8 non-blank lines. A large feature commit can reach 12. Over 12 is a finding: cut whole items, or move the detail to the PR description or the tracker issue.
 - **Small commit, small body.** A `test()`, `docs()`, or comment commit lands at 3 lines.
-- **A part left for later gets one line**, not a paragraph ("The Alembic revision and the tests follow separately.").
 - **The number of changes in the commit is not what the message is judged on.** A commit that carries several purposes is still worth avoiding, and a message forced to explain two unrelated purposes is a sign of one. But do not pad or split the message over the count.
 
 ## Check 2 — sync with the diff
